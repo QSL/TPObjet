@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 
 public class Main {
@@ -30,6 +31,8 @@ public static void main(String args[]) throws IOException{
 	String taille=buff.readLine();
 	System.out.println("La largeur et la hauteur de l'image sont: " + taille);
 		
+	String z= buff.readLine();
+	
 	String[][] a = new String[512][512];
 	int i;
 	int j;
@@ -38,10 +41,12 @@ public static void main(String args[]) throws IOException{
 			a[i][j]= buff.readLine();
 		}
 	}
-	System.out.println(a);
-		
 	
-	
+	// On affiche sous forme de tableau
+	int k;
+	for (k=0; k<512; k++){
+	System.out.println(Arrays.toString(a[k]));
+	}
 	
 	
 	/**On affiche le fichier
@@ -55,8 +60,4 @@ public static void main(String args[]) throws IOException{
 	
 }
 
-private static Object j(int i, int j) {
-	// TODO Auto-generated method stub
-	return null;
-}
 }
